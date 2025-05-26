@@ -1,0 +1,70 @@
+
+
+.data-item1{
+    list-style-type: none;
+    width: 20%;
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.appliedLoans-header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appliedLoans-header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:200px;
+
+}
+.appliedLoans-header-right-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-button{
+    border:none;
+    background-color: transparent;
+}
+
+.Pending{
+    background-color: #fec400;
+}
+
+.Verified{
+    background-color: #29cc97;
+}
+
+.Approved{
+    background-color: #29cc97;
+}
+
+.Rejected{
+    background-color: #cc2929;
+}
+
+.show-button1 {
+  background-color: #2196F3; /* Blue */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  transition: background-color 0.3s ease;
+  margin-left:16px;
+}
+
+.show-button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,0 +1,110 @@
+
+.credit-logo{
+  height: 50px;
+  width: 90px;
+  align-self: center;
+}
+
+.login-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    
+}
+
+.login-heading{
+    font-size: 20px;
+    
+    text-align: center;
+}
+
+.login-form{
+    width: 50%;
+    min-height: 300px;
+    /* box-shadow: 0px 4px 4px 0px; */
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4eee3;
+    background-size: cover;
+}
+
+.form-group1{
+    height: 40px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    outline: #000000;
+    margin: 15px;
+}   
+.form-group{
+    height: 40px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:0px;
+    outline: #000000;
+    
+}
+
+
+.label{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.password-wrapper {
+  position: relative;
+  width: fit-content;
+
+ 
+}
+
+.password-input {
+  padding-right: 90px; /* space for the eye button */
+  height: 26px;
+  font-size: 14px;
+  border:none;
+  
+}
+
+.eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #555;
+  cursor: pointer;
+}
+
+.input{
+    width: 75%;
+    border: none;
+    background-size: cover;
+}
+
+.login-btn-login-page{
+    border: 0px;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #0a512f;
+    background-size: cover;
+    height: 40px;
+    width: 30%;
+    justify-self: flex-end;
+    align-self: center;
+    margin-top: 25px;
+    cursor: pointer;
+    
+}
