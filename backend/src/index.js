@@ -27,7 +27,7 @@ const allowedOrigins = ['https://credit-manager-ikw3.vercel.app', 'http://localh
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: 'http://localhost:5173',
     credentials: true,
   })
 );
