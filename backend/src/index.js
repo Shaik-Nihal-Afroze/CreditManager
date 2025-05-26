@@ -22,7 +22,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowedOrigins = ['https://credit-manager-ikw3.vercel.app/', 'http://localhost:5173']
+const allowedOrigins = ['https://credit-manager-ikw3.vercel.app', 'http://localhost:5173']
    // optional for Render-origin request];
 
 app.use(
