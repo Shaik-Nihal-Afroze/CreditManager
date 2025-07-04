@@ -9,10 +9,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row; /* default desktop layout */
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  margin-left:400px;
+  margin-left: 400px;
+  gap: 30px;
 }
 
 .register-img {
@@ -23,13 +25,7 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-@media screen and (max-width:576px) {
-  .register-img {
-  height:500px;
-  width: 30%;
-}
-  
-}
+
 .register-form {
   background-color: #ffffff;
   padding: 20px;
@@ -37,7 +33,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 40%;
   max-width: 350px;
-  min-height: 300px; /* Added to ensure form height */
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,7 +64,7 @@ body {
   background: #f9f9f9;
   margin-bottom: 10px;
   max-width: 100%;
-  overflow: hidden; /* Prevent overflow inside input/select */
+  overflow: hidden;
 }
 
 .register-form button {
@@ -87,22 +83,63 @@ body {
   background-color: #0056b3;
 }
 
-.label{
-    font-size: 18px;
-    color: #1e293b;
+.label,
+.options,
+.select-options,
+.input {
+  font-size: 16px;
+  color: #1e293b;
 }
 
-.options{
-    font-size: 16px;
-    color: #1e293b;
+.label {
+  font-size: 18px;
 }
 
-.select-options{
-    font-size: 16px;
-    color: #1e293b;
+
+@media screen and (max-width: 1024px) {
+  .register-container {
+    margin-left: 0;
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .register-img {
+    width: 80%;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+
+  .register-form {
+    width: 90%;
+    max-width: 500px;
+  }
 }
 
-.input{
-    font-size: 16px;
-    color: #1e293b;
+/* Small devices like phones */
+@media screen and (max-width: 576px) {
+  .register-container {
+    padding: 20px 10px;
+  }
+
+  .register-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-heading {
+    font-size: 20px;
+  }
+
+  .label,
+  .options,
+  .select-options,
+  .input {
+    font-size: 14px;
+  }
+
+  .register-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
