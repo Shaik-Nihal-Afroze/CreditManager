@@ -1,78 +1,64 @@
+/* Base styles (unchanged from yours unless mentioned) */
 
-.credit-logo{
+.credit-logo {
   height: 50px;
   width: 90px;
   align-self: center;
 }
 
-.login-container{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    
+.login-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
 }
 
-.login-heading{
-    font-size: 20px;
-    
-    text-align: center;
+.login-heading {
+  font-size: 20px;
+  text-align: center;
+  color: white;
 }
 
-.login-form{
-    width: 50%;
-    min-height: 300px;
-    /* box-shadow: 0px 4px 4px 0px; */
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4eee3;
-    background-size: cover;
+.login-form {
+  width: 50%;
+  min-height: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4eee3;
+  background-size: cover;
 }
 
-.form-group1{
-    height: 40px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    outline: #000000;
-    margin: 15px;
-}   
-.form-group{
-    height: 40px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom:0px;
-    outline: #000000;
-    
+.form-group1,
+.form-group {
+  height: 40px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
 }
 
-
-.label{
-    font-size: 15px;
-    font-weight: 500;
+.label {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .password-wrapper {
   position: relative;
   width: fit-content;
-
- 
 }
 
 .password-input {
-  padding-right: 90px; /* space for the eye button */
+  padding-right: 90px;
   height: 26px;
   font-size: 14px;
-  border:none;
-  
+  border: none;
 }
 
 .eye-btn {
@@ -82,29 +68,90 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
   color: #555;
   cursor: pointer;
 }
 
-.input{
-    width: 75%;
-    border: none;
-    background-size: cover;
+.input {
+  width: 75%;
+  border: none;
+  background-size: cover;
 }
 
-.login-btn-login-page{
-    border: 0px;
-    border-radius: 15px;
-    color: #ffffff;
-    background-color: #0a512f;
-    background-size: cover;
+.login-btn-login-page {
+  border: 0;
+  border-radius: 15px;
+  color: #ffffff;
+  background-color: #0a512f;
+  height: 40px;
+  width: 30%;
+  align-self: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+
+/* === Media Queries for Responsiveness === */
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .form-group1,
+  .form-group {
+    width: 80%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .login-btn-login-page {
+    width: 50%;
+  }
+}
+
+/* Small Devices (Mobiles) */
+@media screen and (max-width: 480px) {
+  .credit-logo {
+    width: 70px;
     height: 40px;
-    width: 30%;
-    justify-self: flex-end;
-    align-self: center;
-    margin-top: 25px;
-    cursor: pointer;
-    
+  }
+
+  .login-heading {
+    font-size: 18px;
+  }
+
+  .login-form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .form-group1,
+  .form-group {
+    width: 100%;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .input,
+  .password-input {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .login-btn-login-page {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .eye-btn {
+    font-size: 14px;
+  }
 }
