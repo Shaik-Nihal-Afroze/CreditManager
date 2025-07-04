@@ -11,16 +11,17 @@ button {
   font-family: inherit;
 }
 
-
+/* Header */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px #d6d6d6;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -39,10 +40,10 @@ button {
   height: 24px;
 }
 
-/* === Get Loan Button === */
+/* Get Loan Button */
 .get-loan-button {
   background-color: #ffc204;
-  color: #000;
+  color: #000000;
   font-size: 14px;
   font-weight: 600;
   border: none;
@@ -50,31 +51,33 @@ button {
   padding: 12px 16px;
   width: 100%;
   margin-bottom: 16px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px #cccccc;
   cursor: pointer;
 }
 
-
+/* Loan Tabs */
 .loan-tabs {
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  flex-wrap: wrap;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px #d6d6d6;
   margin-bottom: 16px;
 }
 
 .loan-tab {
-  flex: 1;
+  flex: 1 0 30%;
   text-align: center;
   padding: 8px;
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
-  color: #333;
+  color: #333333;
   cursor: pointer;
   transition: background 0.3s;
+  margin-bottom: 6px;
 }
 
 .loan-tab:hover,
@@ -83,15 +86,16 @@ button {
   color: #1f5f1e;
 }
 
-
+/* Search */
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 10px 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px #d6d6d6;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .search-container input {
@@ -101,39 +105,41 @@ button {
   font-size: 13px;
   padding: 8px;
   background-color: transparent;
+  min-width: 200px;
 }
 
 .search-container img {
   width: 20px;
   height: 20px;
+  margin-right: 8px;
 }
 
-
+/* Section Heading */
 .section-heading {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-
-
+/* Applied Loans Card */
 .applied-loans-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 600px;
+  box-shadow: 0 2px 8px #cccccc;
+  max-width: 700px;
   margin: auto;
   width: 100%;
   box-sizing: border-box;
 }
 
-
+/* Card Header */
 .applied-loans-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .applied-loans-title {
@@ -146,6 +152,7 @@ button {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 8px;
 }
 
 .sort-filter-icons img {
@@ -154,28 +161,37 @@ button {
   cursor: pointer;
 }
 
-
+/* Loan Table */
 .loan-table-header {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
-  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
   font-size: 13px;
   font-weight: 600;
   color: #6b7280;
+  padding: 10px 0;
   border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
 }
-
 
 .loan-table-row {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
-  align-items: center;
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   font-size: 14px;
+  padding: 12px 0;
   border-bottom: 1px solid #f1f5f9;
   color: #1e293b;
+  flex-wrap: wrap;
 }
 
+/* Table Columns */
+.loan-officer,
+.loan-amount,
+.loan-date,
+.status-pill {
+  flex: 1 0 45%;
+  margin-bottom: 8px;
+}
 
 .loan-officer {
   display: flex;
@@ -189,11 +205,9 @@ button {
   height: 18px;
 }
 
-
 .loan-amount {
   font-weight: 500;
 }
-
 
 .loan-date {
   font-size: 12px;
@@ -201,10 +215,9 @@ button {
   line-height: 1.3;
 }
 
-
 .status-pill {
   background-color: #22c55e;
-  color: white;
+  color: #ffffff;
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
@@ -214,17 +227,21 @@ button {
   text-align: center;
 }
 
-
+/* Simple Responsive Layout */
 @media screen and (max-width: 576px) {
-  .loan-table-header,
-  .loan-table-row {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 8px;
+  .loan-tab {
+    flex: 1 0 100%;
   }
 
-  .loan-table-header div:nth-child(n+3),
-  .loan-table-row div:nth-child(n+3) {
-    grid-column: span 2;
+  .loan-officer,
+  .loan-amount,
+  .loan-date,
+  .status-pill {
+    flex: 1 0 100%;
+  }
+
+  .loan-table-header {
+    display: none;
   }
 
   .applied-loans-title {
@@ -235,6 +252,24 @@ button {
     font-size: 11px;
     padding: 3px 8px;
   }
-}
 
+  .get-loan-button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .sort-filter-icons {
+    justify-content: flex-end;
+    width: 100%;
+  }
 }
