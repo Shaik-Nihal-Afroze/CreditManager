@@ -110,15 +110,38 @@
 
 .header {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-/*   align-items: center; */
-  flex-wrap: wrap;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
   color: #555;
   font-size: 0.9rem;
-  gap: 10px;
+  flex-wrap: wrap;
 }
+
+/* Column styles inside .header */
+.header span,
+.header .borrowerInfo,
+.header .dateTime,
+.header .loan-status,
+.header .status-button {
+  flex: 1 1 20%; /* Equally spaced */
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Adjust specific ones */
+.header .loan-status {
+  justify-content: center;
+}
+
+.header .status-button {
+  justify-content: center;
+}
+
 
 .borrowerInfo {
   display: flex;
