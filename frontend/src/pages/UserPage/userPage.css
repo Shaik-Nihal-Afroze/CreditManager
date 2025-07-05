@@ -6,7 +6,10 @@
   padding: 20px;
   box-sizing: border-box;
 }
-
+.loan-offer-details-heading-container{
+  display:flex;
+  justify-content:flex-start;
+}
 .userpage-content {
   display: flex;
   flex-direction: column;
@@ -329,3 +332,5 @@
     gap: 8px;
   }
 }
+
+
