@@ -13,8 +13,8 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { FaSortAmountUp } from "react-icons/fa";
 
 
-import './userpage.css'
-import "./userpage2.css"
+import './userPage.css'
+
 
 
 const UserPage = () => {
