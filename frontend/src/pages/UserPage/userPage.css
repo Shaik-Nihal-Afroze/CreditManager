@@ -1,4 +1,3 @@
-/* ===== UserPage Container ===== */
 .userpage-container {
   display: flex;
   flex-direction: column;
@@ -8,48 +7,6 @@
   box-sizing: border-box;
 }
 
-/* ===== Header Styles ===== */
-.header {
-  width: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.header-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-user {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.header-logout {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* ===== Page Content ===== */
 .userpage-content {
   display: flex;
   flex-direction: column;
@@ -58,7 +15,7 @@
   margin-top: 100px;
 }
 
-/* ===== Get Loan Section ===== */
+/* === Top Get Loan Section === */
 .get-loan-container {
   display: flex;
   align-items: center;
@@ -94,7 +51,7 @@
   cursor: pointer;
 }
 
-/* ===== Loan Type Tabs ===== */
+/* === Loan Type Tabs === */
 .loan-type-container {
   display: flex;
   justify-content: space-between;
@@ -121,7 +78,7 @@
   border-right: none;
 }
 
-/* ===== Search Bar ===== */
+/* === Search === */
 .search-container {
   display: flex;
   align-items: center;
@@ -153,7 +110,7 @@
   font-size: 14px;
 }
 
-/* ===== Applied Loans Section ===== */
+/* === Applied Loans Container === */
 .applied-loads-container {
   width: 750px;
 }
@@ -187,7 +144,7 @@
   margin-right: 5px;
 }
 
-/* ===== Applied Loans List ===== */
+/* === Applied Loan Cards === */
 .appliedLoans {
   background: #fff;
   border-radius: 10px;
@@ -276,7 +233,7 @@
   background-color: #ffc107;
 }
 
-/* ===== Modal ===== */
+/* === Modal === */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -298,7 +255,9 @@
   border-radius: 10px;
 }
 
-/* ========== Responsive Styles ========== */
+/* ================= */
+/* === Responsive === */
+/* ================= */
 @media screen and (max-width: 1024px) {
   .get-loan-container,
   .button-container,
@@ -368,17 +327,5 @@
 
   .loanList .header {
     gap: 8px;
-  }
-
-  .header {
-    padding: 12px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
   }
 }
