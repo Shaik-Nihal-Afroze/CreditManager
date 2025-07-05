@@ -255,3 +255,115 @@ padding: 15px 0;
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+/* ---------- Responsive Layout Fixes ---------- */
+
+/* Devices under 1200px: reduce columns in dashboard stats */
+@media (max-width: 1200px) {
+  .data-item {
+    width: 45%;
+  }
+
+  .header {
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  }
+}
+
+/* Devices under 992px: stack dashboard + content */
+@media (max-width: 992px) {
+  .verifier-page-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .verifier-page-content-right {
+    height: auto;
+    padding: 10px;
+  }
+
+  .data-container-unorderedlist {
+    justify-content: center;
+    height: auto;
+  }
+
+  .data-item {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .header {
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    font-size: 0.85rem;
+  }
+
+  .loan-status {
+    font-size: 0.55rem;
+    height: auto;
+  }
+
+  .show-button-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Devices under 768px: handle loan list and stats */
+@media (max-width: 768px) {
+  .data-item {
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  .dateTime {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .loanList {
+    overflow-x: auto;
+  }
+
+  .loan-status,
+  .show-button,
+  .action-button {
+    font-size: 0.6rem;
+    width: auto;
+    padding: 4px 8px;
+  }
+
+  .status-button {
+    margin-left: 0;
+  }
+}
+
+/* Devices under 576px: smaller padding and font */
+@media (max-width: 576px) {
+  .appliedLoans {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .data-container-heading {
+    font-size: 14px;
+  }
+
+  .show-button {
+    font-size: 0.55rem;
+    padding: 6px 10px;
+  }
+
+  .verifier-page-content {
+    margin-top: 60px;
+  }
+}
