@@ -6,7 +6,6 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  
 }
 
 .userpage-content {
@@ -183,9 +182,7 @@
   margin-left: 5px;
 }
 
-/* =============== */
-/* Loan Card Fixes */
-/* =============== */
+
 
 .loan-card {
   background-color: #fff;
@@ -243,7 +240,7 @@
   background-color: #28a745;
 }
 
-/* === MODAL === */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -370,6 +367,7 @@
     font-size: 12px;
     padding: 3px 8px;
   }
+  
 }
 
 @media screen and (max-width: 480px) {
