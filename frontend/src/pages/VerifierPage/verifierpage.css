@@ -1,4 +1,3 @@
-/* General styles */
 .text {
   font-size: 20px;
   color: #000;
@@ -11,83 +10,34 @@
   display: flex;
   flex-direction: column;
   background-color: #f0f0f0;
-  overflow-x: hidden;
 }
 
 .verifier-page-content {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   background-color: #ededed;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin-top: 85px;
 }
 
 .verifier-page-content-right {
+  height: 100%;
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   overflow-y: auto;
 }
 
-/* ===== Statistics Section ===== */
-.data-container-unorderedlist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  gap: 20px;
-}
-
-.data-item {
-  list-style-type: none;
-  width: 48%;
-}
-
-.data-mainContainer {
-  display: flex;
-  flex-direction: row;
-  height: 80px;
-  box-shadow: 0px 2px 2px 0px grey;
-}
-
-.data-image-container {
-  width: 30%;
-  background-color: #0A512F;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.data-image {
-  height: 30px;
-  width: 40px;
-}
-
-.data-value-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-  line-height: 1.2;
-}
-
-.data-container-heading {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-}
-
-/* ===== Loan List Section ===== */
 .appliedLoans {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  min-height: 60vh;
   width: 100%;
 }
 
@@ -98,16 +48,29 @@
   color: #333;
 }
 
+/* Header Labels Row */
+.loanListHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #777;
+  border-bottom: 1px solid #ccc;
+}
+
+.loanListHeader span {
+  flex: 1 1 20%;
+  min-width: 100px;
+}
+
+/* Loan List Rows */
 .loanList {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.loanList > .header:first-child {
-  font-weight: bold;
-  color: #777;
-  border-bottom: 1px solid #ccc;
+  width: 100%;
 }
 
 .header {
@@ -115,8 +78,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 0.9rem;
   flex-wrap: wrap;
 }
 
@@ -126,9 +91,19 @@
 .header .loan-status,
 .header .status-button {
   flex: 1 1 20%;
-  min-width: 120px;
+  min-width: 100px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+/* Special alignment tweaks */
+.header .loan-status {
+  justify-content: center;
+}
+
+.header .status-button {
+  justify-content: center;
 }
 
 .borrowerInfo {
@@ -143,10 +118,10 @@
 }
 
 .dateTime {
+  font-size: 0.9rem;
+  color: #555;
   display: flex;
   flex-direction: column;
-  font-size: 0.85rem;
-  color: #555;
 }
 
 .date {
@@ -154,47 +129,57 @@
   color: #aaa;
 }
 
-/* Loan status buttons */
+/* Status Buttons */
 .loan-status {
+  width: 70px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  background-color: #4caf50;
+}
+
+.approved {
+  background-color: #4caf50;
+}
+
+.verified {
+  background-color: #29cc97;
+}
+
+.rejected {
+  background-color: #f44336;
+}
+
+.pending-button {
+  background-color: #fec400;
+}
+
+.action-button {
   width: 70px;
   height: 30px;
   border-radius: 8px;
   border: none;
-  font-size: 0.7rem;
-  font-weight: 600;
   color: white;
-  text-align: center;
+  font-weight: 600;
 }
 
-.Approved {
-  background-color: #4caf50;
-}
-
-.Verified {
-  background-color: #29cc97;
-}
-
-.Rejected {
-  background-color: #f44336;
-}
-
-/* Three-dot menu */
 .status-button {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin-left: 8px;
 }
 
+/* Three-dot dropdown buttons */
 .show-button-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 5px;
-  gap: 10px;
 }
 
 .show-button {
@@ -204,20 +189,15 @@
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  margin: 4px;
+  transition: background-color 0.3s ease;
 }
 
-/* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
-  .verifier-page-content {
-    flex-direction: column;
-  }
-
-  .data-item {
-    width: 100%;
-  }
-
-  .header {
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header,
+  .loanListHeader {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -228,15 +208,15 @@
   .header .loan-status,
   .header .status-button {
     flex: 1 1 100%;
-    justify-content: flex-start;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
-  .loan-status {
-    width: 100px;
+  .data-container-unorderedlist {
+    flex-direction: column;
+    height: auto;
   }
 
-  .show-button {
-    width: 80px;
+  .data-item {
+    width: 100%;
   }
 }
