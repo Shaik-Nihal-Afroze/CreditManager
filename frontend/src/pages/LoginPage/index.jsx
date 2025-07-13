@@ -29,7 +29,7 @@ const LoginPage = () => {
     <div className="login-container">
      
       <form onSubmit={handleLogin} className="login-form">
-         <img src="https://res.cloudinary.com/dze7v0evj/image/upload/v1746809049/credit_image_edited_yin53c.png" className='credit-logo'/>
+         <img src="https://res.cloudinary.com/dze7v0evj/image/upload/v1748578989/gvgzbatfsfnknfydjgoz.png" className='credit-logo'/>
         <div className="form-group1">
           <label htmlFor="email" className='label'>Email</label>
           <input
