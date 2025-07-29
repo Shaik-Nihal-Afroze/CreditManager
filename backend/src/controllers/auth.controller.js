@@ -98,7 +98,6 @@ export const logout = async (req, res) => {
       secure: true,
       sameSite: 'None',
       path: '/"});
-    
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
     console.log("Error in logout controller", error.message);
