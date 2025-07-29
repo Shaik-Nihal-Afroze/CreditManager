@@ -97,7 +97,7 @@ export const logout = async (req, res) => {
     res.clearCookie("jwtToken",{ httpOnly: true,
       secure: true,
       sameSite: 'None',
-      path: '/"});
+      path: "/"});
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
     console.log("Error in logout controller", error.message);
